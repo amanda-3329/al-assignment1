@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>User List</h1>
+
+
+{% for user in users %}
+  <div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+      {% comment %} <div class="card-content"> {% endcomment %}
+        <img src="https://picsum.photos/200/40">
+        <span class="card-title">{{ user.user_name }}</span>
+        <p>Username: {{ user.user_name }}</p>
+        <p>Image: {{ user.user_image }}</p>
+        <p>Age: {{ user.user_age }}</p>
+        <p>Description: {{ user.description }}</p>
+        
+      </div>
+    </div>
+  </div>
+</div> 
+{% endfor %}
+
+{% endblock %}
